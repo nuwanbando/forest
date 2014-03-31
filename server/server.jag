@@ -1,0 +1,14 @@
+<%
+
+var log = new Log();
+var q = request.getParameter('quantity');
+
+var url = "http://localhost:8280/fp/10/order/epid/123/did/111/book/xx11/q/" + q;
+var params = {};
+var headers = {'Authorization':'Bearer b1ccde9cbf55424abd93c177bf4c9496'};
+
+var res = get(url, params, headers, 'json');
+
+print({'data':res});
+
+%>
